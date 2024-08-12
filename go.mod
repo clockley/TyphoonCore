@@ -8,3 +8,5 @@ require (
 	github.com/seebs/nbt v0.0.0-20181001035743-e7f88884fadd
 	gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f // indirect
 )
+
+replace github.com/user/TyphoonCore => /home/christian/Desktop/OutlierAICode/typhooncore/TyphoonCore
