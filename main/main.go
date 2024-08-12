@@ -1,7 +1,7 @@
 package main
 
 import (
-	t "github.com/TyphoonMC/TyphoonCore"
+	t "github.com/clockley/TyphoonCore"
 )
 
 func main() {
