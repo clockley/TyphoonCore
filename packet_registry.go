@@ -56,7 +56,7 @@ func (player *Player) HandlePacket(id int, length int) (packet Packet, err error
 				player.io.rdr.Read(buff)
 				nbr += 500
 			} else {
-				player.io.rdr.Read(buff[:length-nbr])
+				player.io.rdr.Read(buff[:length-nbr-1])
 				nbr = length
 			}
 		}
@@ -65,7 +65,7 @@ func (player *Player) HandlePacket(id int, length int) (packet Packet, err error
 
 	packet, _ = reflect.New(typ).Interface().(Packet)
 
-	if err = packet.Read(player, length); err != nil {
+	if err = packet.Read(player, length-1); err != nil {
 		return nil, err
 	}
 	return
